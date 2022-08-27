@@ -1,5 +1,6 @@
 package com.example.work
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -14,14 +15,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var startWork: AppCompatButton
     private lateinit var cancelWork: AppCompatButton
     private lateinit var RunningMultipleTasks: AppCompatButton
-
     private lateinit var cancelWorkAll: AppCompatButton
+    private lateinit var activity2: AppCompatButton
+    private lateinit var activityDataBinding: AppCompatButton
 
     /**
      * Задача готова. Теперь нам нужно MyWorker обернуть в WorkRequest:
      */
     private val myWorkRequest = OneTimeWorkRequest.Builder(MyWorker::class.java).build()
-
 
     /**
      * В Constraints.Builder включаем критерий setRequiresCharging,
@@ -69,6 +70,17 @@ class MainActivity : AppCompatActivity() {
         cancelWork = findViewById(R.id.cancelWork)
         RunningMultipleTasks = findViewById(R.id.RunningMultipleTasks)
         cancelWorkAll = findViewById(R.id.cancelWorkAll)
+        activity2 = findViewById(R.id.activity2)
+        activityDataBinding = findViewById(R.id.clickDataBinding)
+
+
+        activityDataBinding.setOnClickListener {
+            startActivity(Intent(this, MainActivityDataBinding::class.java))
+        }
+
+        activity2.setOnClickListener {
+            startActivity(Intent(this, MainActivity2::class.java))
+        }
 
 
         /**
