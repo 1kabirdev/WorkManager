@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Work"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivityDataBinding"
+            android:name=".MainActivity3"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"

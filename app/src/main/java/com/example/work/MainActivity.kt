@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
 
         activityDataBinding.setOnClickListener {
-            startActivity(Intent(this, MainActivityDataBinding::class.java))
+            startActivity(Intent(this, MainActivity3::class.java))
         }
 
         activity2.setOnClickListener {
